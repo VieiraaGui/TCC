@@ -1,0 +1,82 @@
+header{
+	padding:172px 0;
+	background: linear-gradient( #62727b 0%, #37474f 100%);
+}
+
+.logo {
+	width: 250px;
+}
+
+.img-carousel {
+	padding:30px 0;
+	width:650px;
+	height:400px;
+}
+
+.text-area {
+	resize: none;
+	border: none;
+}
+
+.dropdown-item {
+	background-color: transparent !important;
+}
+
+.dropdown-text {
+	resize:none;
+	overflow: hidden;
+}
+
+.text-botoes {
+	padding-left: 100px !important;
+}
+
+.linha {
+	background-color:white;
+	width:2px;
+	height:10px;
+}
+
+.img-card {
+	width:50px;
+	height:250px;
+}
+
+.navbar-default{
+	background: linear-gradient( #37474f 0%, #62727b 100%);
+}
+
+.conteudo {
+	padding: 70px 10px;
+}
+
+.nav-link {
+	color: white !important;
+	font-family: cursive;
+}
+
+@media (min-width: 768px){
+	.dropdown-menu {
+		min-width:500px !important;
+	}
+}
+
+.vertical-menu {
+  width: 200px;
+  padding-top: 73px;
+  height: 100%;
+  position:fixed;
+  background: linear-gradient( #62727b 0%, #37474f 100%);
+}
+
+.vertical-menu a {
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
