@@ -1,16 +1,27 @@
 header{
-	padding:172px 0;
-	background: linear-gradient( #62727b 0%, #37474f 100%);
+	padding:70px 0;
+	background: linear-gradient( #0d47a1 0%, #002171 100%);
 }
 
+.navbar-default{
+	background: linear-gradient( #002171 0%, #0d47a1 100%);
+}
+
+.vertical-menu {
+  width: 200px;
+  padding-top: 73px;
+  height: 100%;
+  position:fixed;
+  background: linear-gradient( #0d47a1 0%, #002171 100%);
+}
 .logo {
 	width: 250px;
 }
 
 .img-carousel {
 	padding:30px 0;
-	width:650px;
-	height:400px;
+	width:480px;
+	height:350px;
 }
 
 .text-area {
@@ -42,10 +53,6 @@ header{
 	height:250px;
 }
 
-.navbar-default{
-	background: linear-gradient( #37474f 0%, #62727b 100%);
-}
-
 .conteudo {
 	padding: 70px 10px;
 }
@@ -61,13 +68,6 @@ header{
 	}
 }
 
-.vertical-menu {
-  width: 200px;
-  padding-top: 73px;
-  height: 100%;
-  position:fixed;
-  background: linear-gradient( #62727b 0%, #37474f 100%);
-}
 
 .vertical-menu a {
   color: white;
