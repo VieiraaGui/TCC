@@ -5,19 +5,32 @@
 	<meta charset="utf-8">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">	
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-dark navbar-expand-lg navbar-default fixed-top">
-		<div class="container-fluid">
+	<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+		<div class="container">
 			<a class="navbar-brand col-3" href="Frontend.html"><img class="logo" src="img/logo.png" ></a>
-			<div class="row col-9">
-				<ul class="navbar-nav text-light ml-mr-auto col border-right">
-					<li class="nav-item"><a class="nav-link text-botoes" href="#">Monte seu PC</a></li>
+			<div class="input-group">
+			 	<input type="text" class="form-control" placeholder="Pesquise aqui seu produto" aria-label="Recipient's username" aria-describedby="botaoPesquisa">
+			 	<div class="input-group-append">
+			    	<button class="btn btn-success" type="button" id="botaoPesquisa"><i class="fas fa-search"></i></button>
+			  	</div>
+				<button class="btn btn-outline-warning ml-3" type="button" id="botaoCarrinho"><i class="fas fa-shopping-cart"></i><span class="badge badge-outline-warning">0</span></button>
+			</div>
+		</div>
+	</nav>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-dark navbar-expand-lg navbar-default shadow rounded-lg">
+				<ul class="navbar-nav text-dark ml-mr-auto col border-right">
+					<li class="nav-item"><a class="nav-link text-botoes" href="#"><i class="fas fa-desktop"></i> Monte seu PC</a></li>
 				</ul>
-				<ul class="navbar-nav text-light border-right col">
+				<ul class="navbar-nav text-dark border-right col">
 					<li class="nav-item">
-						<a id="hardware" class="nav-link text-botoes dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Hardware</a>
+						<a id="hardware" class="nav-link text-botoes dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-microchip"></i> Hardware</a>
 						<div class="dropdown-menu" aria-labelledby="hardware">
 							<div class="row">
 	    						<a class="dropdown-item col border-right" href="#">Processadores</a>
@@ -41,33 +54,45 @@
   						</div>
 					</li>
 				</ul>				
-				<ul class="navbar-nav text-light col border-right">
-					<li class="nav-item"><a class="nav-link text-botoes" href="#">Promoções</a></li>
+				<ul class="navbar-nav text-dark col border-right">
+					<li class="nav-item"><a class="nav-link text-botoes" href="promocoes.html"><i class="fas fa-percent"></i> Promoções</a></li>
 				</ul>				
-				<ul class="navbar-nav text-light col">
-					<li class="nav-item"><a class="nav-link text-botoes" href="#">Lojas</a></li>
+				<ul class="navbar-nav text-dark col">
+					<li class="nav-item"><a class="nav-link text-botoes" href="#"><i class="fas fa-store"></i> Lojas</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="vertical-menu col-2">
+			  	<ul class="nav flex-column">
+			  		<span class="text-center display-4">Filtro</span>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Active</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Disabled</a>
+				  </li>
 				</ul>
 			</div>
-		</div>
-	</nav>
-	<div class="row">
-		<div class="vertical-menu col-2">
-		  	<ul class="nav flex-column">
-			  <li class="nav-item">
-			    <a class="nav-link active" href="#">Active</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Disabled</a>
-			  </li>
-			</ul>
-		</div>
-		<div style="background-color:grey;" class="col-10">
+			<div style="background-color:white;" class="col-10">
+				<div class="border border-info rounded mt-2">
+					<img src="img/inteli7.jpg" class="img-prom">
+				</div>
+				<div class="border border-info rounded mt-2">
+					<img src="img/asusPrime.jpg" class="img-prom">
+				</div>
+				<div class="border border-info rounded mt-2">
+					<img src="img/Onepower.jpg" class="img-prom">
+				</div>
+			</div>
 		</div>
 	</div>
 
