@@ -26,9 +26,66 @@ header{
 }
 
 .img-prom {
-	width:70px;
-	height:70px;
+	width:90px;
+	height:100px;
+	padding-top: 10px;
 }
+
+.valor-origin {
+	font-size:10px;
+	margin-bottom: 0px;
+	padding-top: 5px;
+}
+
+.valor-promo {
+	margin-bottom: 0px;
+}
+
+.btn-compra {
+	margin-bottom: 5px;
+}
+
+.buttons-promo {
+	padding-top: 15px;
+}
+
+.valor-parcela {
+	font-size: 10px;
+	margin-bottom: 0px;
+}
+
+.valor-boleto {
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+
+.desc-boleto {
+	font-size: 8px;
+}
+
+.avaliacao {
+	font-size: 10px;
+}
+
+.div-promocoes {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	background:white;
+}
+
+.title-promo {
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+
+.desc-promo {
+	font-size:10px;
+}
+
+.div-itens {
+	height: 110px;
+}
+
 
 .text-area {
 	resize: none;
@@ -42,6 +99,10 @@ header{
 .dropdown-text {
 	resize:none;
 	overflow: hidden;
+}
+
+.title-filtro {
+	padding-top: 20px;
 }
 
 .text-botoes {
