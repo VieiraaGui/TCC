@@ -34,7 +34,7 @@ header{
 .valor-origin {
 	font-size:10px;
 	margin-bottom: 0px;
-	padding-top: 5px;
+	padding-top: 10px;
 }
 
 .valor-promo {
@@ -76,14 +76,16 @@ header{
 .title-promo {
 	font-size: 15px;
 	margin-bottom: 0px;
+	padding-top: 10px;
 }
+
 
 .desc-promo {
 	font-size:10px;
 }
 
 .div-itens {
-	height: 110px;
+	height: auto;
 }
 
 
