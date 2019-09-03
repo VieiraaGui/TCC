@@ -140,19 +140,6 @@ header{
 	font-family: cursive;
 }
 
-@media (min-width: 768px){
-	.dropdown-menu {
-		min-width:500px !important;
-	}
-
-}
-
-@media only screen and (max-width: 991px){
-	.navbar-default {
-		margin-top: 50px;
-	}
-}
-
 
 .vertical-menu a {
   color: white;
@@ -163,5 +150,81 @@ header{
 
 .vertical-menu a:hover {
   background-color: #ccc;
+}
+
+@media (min-width: 768px){
+	.dropdown-menu {
+		min-width:500px !important;
+	}
+
+
+}
+
+@media only screen and (max-width: 991px){
+	.navbar-default {
+		margin-top: 50px;
+	}
+
+	.icone {
+		background-color: transparent;
+		color:white;
+	}
+
+	.hidden {
+		display: unset !important;
+		background: transparent;
+	}
+
+	.filtro {
+		display: none;
+	}
+}
+
+.check {
+	display: none;
+}
+
+.hidden {
+	display:none;
+	cursor: pointer;
+	padding: 15px;
+	position:absolute;
+	z-index: 1;
+}
+
+
+.barra {
+	height: 100%;
+	width: 0px;
+	position: absolute;
+	transition: all .2s linear;
+	left:-300px;
+	background-color: white;
+}
+
+.filtro-Responsive {
+	width: auto;
+	position: absolute;
+	top: 60px;
+}
+
+.filtro-Responsive > a {
+	text-decoration: none;
+}
+
+.link {
+	padding: 5px;
+	font-family: arial;
+	font-size: 12pt;
+	transition: all .2s linear;
+	color: white;
+}
+
+.link:hover {
+	background-color: #050542;
+}
+
+.check:checked ~ .barra {
+	transform: translateX(300px);
 }
 

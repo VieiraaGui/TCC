@@ -65,9 +65,20 @@
 	</header>
 	<div class="container">
 		<div class="row">
-			<input type="checkbox" class="check" id="check">
-			<label id="icone"></label>
-			<div class="vertical-menu col-2 col-sm-2 rounded">
+			<div class="vertical-menu col-2 col-sm-2 rounded hidden">
+				<input type="checkbox" class="check" id="check">
+				<label id="icone" for="check" class="icone"><i class="fas fa-bars fa-2x"></i></label>
+				<div class="barra">
+					<nav class="filtro-Responsive">
+						<a href="#"><div class="link">Home</div></a>
+						<a href="#"><div class="link">Tutoriais</div></a>
+						<a href="#"><div class="link">Downloads</div></a>
+						<a href="#"><div class="link">Eventos</div></a>
+						<a href="#"><div class="link">Contato</div></a>
+					</nav>
+				</div>
+			</div>
+			<div class="vertical-menu col-2 col-sm-2 rounded filtro">
 			  	<ul class="nav flex-column">
 			  		<span class="text-center font-weight-bold text-uppercase h3 title-filtro">Filtro</span>
 				  <li class="nav-item">
