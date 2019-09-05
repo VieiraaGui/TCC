@@ -58,6 +58,14 @@ header{
 	padding-bottom: 15px;
 }
 
+.filtro {
+	padding-top: 20px;
+}
+
+.inFilter {
+	height: 97%;
+}
+
 .valor-parcela {
 	font-size: 10px;
 	margin-bottom: 0px;
@@ -114,10 +122,13 @@ header{
 
 .title-filtro {
 	padding-top: 20px;
+	font-family: arial;
+	background-color: #efebe9;
 }
 
 .text-botoes {
 	padding-left: 100px !important;
+	font-family: arial !important;
 }
 
 .linha {
