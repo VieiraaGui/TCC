@@ -31,6 +31,31 @@ header{
 	padding-top: 10px;
 }
 
+.produto {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	background:white;
+}
+
+.img-produto {
+	height: 350px;
+	width: 400px;
+}
+
+.carousel_img_prod {
+	height: 65px;
+	width: 65px;
+}
+
+.desc-prod {
+	font-size:15pt;
+	color:darkblue;
+}
+
+.marca-prod {
+	font-size: 40pt;
+}
+
 .valor-origin {
 	font-size:10px;
 	margin-bottom: 0px;
