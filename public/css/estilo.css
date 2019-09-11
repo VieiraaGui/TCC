@@ -208,7 +208,7 @@ header{
 
 	.hidden {
 		display: unset !important;
-		background: transparent;
+		background-color: transparent;
 	}
 
 	.filtro {

@@ -63,18 +63,82 @@
 			</nav>
 		</div>
 	</header>
-	<div class="container">
+	<div id="Conteudo-promocoes" class="container">
 		<div class="row">
-			<div class="vertical-menu col-2 col-sm-2 rounded hidden">
+			<div class="vertical-menu col-3 col-sm-3 rounded hidden">
 				<input type="checkbox" class="check" id="check">
-				<label id="icone" for="check" class="icone"><i class="fas fa-bars fa-2x"></i></label>
+				<label id="icone" for="check" class="icone"><i id="icone-responsive" data-toggle="false" class="fas fa-bars fa-2x"></i></label>
 				<div class="barra">
 					<nav class="filtro-Responsive">
-						<a href="#"><div class="link">Home</div></a>
-						<a href="#"><div class="link">Tutoriais</div></a>
-						<a href="#"><div class="link">Downloads</div></a>
-						<a href="#"><div class="link">Eventos</div></a>
-						<a href="#"><div class="link">Contato</div></a>
+						<ul class="nav flex-column">
+				  		<span class="text-center pb-2 font-weight-bold text-uppercase h5 title-filtro border rounded"><i class="fas fa-filter"></i> Filtros</span>
+					  <li class="nav-item ml-4">
+					  	<span class="text-center">Preços:</span>
+					  	<div class="">
+						    <input class="form-control-sm" placeholder="De">
+						</div>
+						<div class="">
+						    <input class="form-control-sm mt-1" placeholder="Até">
+						</div>
+					    <div class="row mt-1">
+					    	<button class="btn btn-sm btn-success ml-3">Aplicar</button>
+					    	<button class="btn btn-sm btn-warning ml-5">Limpar</button>
+					    </div>
+					  </li>
+					  <li class="nav-item mt-3 ml-4">
+					    <span class="text-center">Marcas:</span>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="MarcaAMD">
+	    					<label class="custom-control-label" for="MarcaAMD">AMD</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="MarcaIntel">
+	    					<label class="custom-control-label" for="MarcaIntel">Intel</label>
+					    </div>
+					  </li>
+					  <li class="nav-item mt-3 ml-4">
+					    <span class="text-center">Lojas:</span>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="LojaKabum">
+	    					<label class="custom-control-label" for="LojaKabum">Kabum</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="LojaPichau">
+	    					<label class="custom-control-label" for="LojaPichau">Pichau</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="LojaBalaoInformatica">
+	    					<label class="custom-control-label" for="LojaBalaoInformatica">Balão Informatica</label>
+					    </div>
+					  </li>
+					  <li class="nav-item mt-3 ml-4">
+					    <span class="text-center">Series:</span>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="SerieAMDRyzen">
+	    					<label class="custom-control-label" for="SerieAMDRyzen">AMD Ryzen</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="SerieAMDFXSeries">
+	    					<label class="custom-control-label" for="SerieAMDFXSeries">AMD FX Series</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="SerieAMDAPU">
+	    					<label class="custom-control-label" for="SerieAMDAPU">AMD APU</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="SerieAMDSempron">
+	    					<label class="custom-control-label" for="SerieAMDSempron">AMD Sempron</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="SerieIntelCorei9">
+	    					<label class="custom-control-label" for="SerieIntelCorei9">Intel Core i9</label>
+					    </div>
+					    <div class="custom-control custom-checkbox">
+					    	<input type="checkbox" class="custom-control-input" id="SerieIntelCorei7">
+	    					<label class="custom-control-label" for="SerieIntelCorei7">Intel Core i7</label>
+					    </div>
+					  </li>
+					</ul>
 					</nav>
 				</div>
 			</div>
@@ -151,7 +215,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-9 col-sm-9 div-promocoes">
+			<div id="div-prom" class="col-sm-12 col-9 div-promocoes">
 				<div class="border rounded mt-2">
 					<div class="row">
 						<img src="img/inteli7.jpg" class="img-prom col-2">
