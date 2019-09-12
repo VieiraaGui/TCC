@@ -38,8 +38,17 @@ header{
 }
 
 .img-produto {
+	margin-left: 50px;
 	height: 350px;
 	width: 400px;
+}
+
+@media only screen and (max-width: 991px) {
+	.img-produto {
+		margin-left: 0px;
+		width: 300px;
+		height: 300px;
+	}
 }
 
 .carousel_img_prod {
@@ -176,6 +185,29 @@ header{
 	font-family: cursive;
 }
 
+.preco-prod {
+	color: #f57c00;
+	font-size:30pt;
+	margin-bottom: 0px;
+	font-family: arial;
+}
+
+.parcela-prod {
+	margin-top: 0px;
+	font-size: 10pt;
+	font-family: arial;
+}
+
+.preco-boleto {
+	font-size: 20pt;
+	padding-top: 20px;
+	font-family: arial;
+}
+
+.parcela-boleto {
+	font-size: 10pt;
+	font-family: arial;
+}
 
 .vertical-menu a {
   color: white;

@@ -27,10 +27,10 @@ btnPesquisa.click(event => {
 
 
 function addIconClasses() {
-    $("#Conteudo-promocoes").each(function(){
+    $(".Promocoes-Produto").each(function(){
         const scre = $("body").width();
-        const prom = $("#Conteudo-promocoes");
-		const divProm = $("#div-prom");
+        const prom = $(".Promocoes-Produto");
+		const divProm = $(".prom-prod");
         if ( scre <= 991 ) {
             prom.addClass("container-fluid");
             prom.removeClass("container");
@@ -44,12 +44,19 @@ function addIconClasses() {
         } 
 
         if (prom.hasClass('container-fluid')){
-        		const btnIcone = $("#icone-responsive");
+        		const divProm = $(".prom-prod");
+        		const btnIcone = $("#icone-responsive, #icone-responsive path");
 				btnIcone.click(event => {
 				const iToggle = $(event.target);
-				const isToggled = iToggle.attr('data-toggle');
-				const divProm = $("#div-prom");
 
+				let isToggled = 'true';
+
+				if (iToggle.attr('fill')) 
+					isToggled = iToggle.closest('svg').attr('data-toggle');
+				
+			    else 
+					isToggled = iToggle.attr('data-toggle');
+				
 				if (isToggled === "false") {
 					divProm.removeClass('col-sm-12');
 					divProm.addClass('col-sm-9');

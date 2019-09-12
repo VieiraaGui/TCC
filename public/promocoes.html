@@ -58,12 +58,24 @@
 					<li class="nav-item"><a class="nav-link text-botoes" href="promocoes.html"><i class="fas fa-percent"></i> Promoções</a></li>
 				</ul>				
 				<ul class="navbar-nav text-dark col">
-					<li class="nav-item"><a class="nav-link text-botoes" href="#"><i class="fas fa-store"></i> Lojas</a></li>
+					<li class="nav-item">
+						<a id="hardware" class="nav-link text-botoes dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-store"></i> Lojas</a>
+						<div class="dropdown-menu" aria-labelledby="hardware">
+							<div class="row">
+	    						<a class="dropdown-item col border-right" href="https://www.kabum.com.br">Kabum</a>
+	    						<a class="dropdown-item col" href="https://www.pichau.com.br">Pichau</a>
+	    					</div>
+	    					<div class="dropdown-divider"></div>
+    						<div class="row">
+	    						<a class="dropdown-item col border-right" href="https://www.balaodainformatica.com.br">Balão da Informática</a>
+	    					</div>
+  						</div>
+					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<div id="Conteudo-promocoes" class="container">
+	<div class="container Promocoes-Produto">
 		<div class="row">
 			<div class="vertical-menu col-3 col-sm-3 rounded hidden">
 				<input type="checkbox" class="check" id="check">
@@ -215,7 +227,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="div-prom" class="col-sm-12 col-9 div-promocoes">
+			<div class="col-sm-12 col-9 div-promocoes prom-prod">
 				<div class="border rounded mt-2">
 					<div class="row">
 						<img src="img/inteli7.jpg" class="img-prom col-2">
