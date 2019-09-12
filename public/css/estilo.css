@@ -19,10 +19,15 @@ header{
 	width: 250px;
 }
 
+.circle {
+  border-radius: 10px;
+}
+
 .img-carousel {
 	padding:30px 0;
 	width:480px;
 	height:350px;
+	margin-left: 18px;
 }
 
 .img-prom {
@@ -43,13 +48,6 @@ header{
 	width: 400px;
 }
 
-@media only screen and (max-width: 991px) {
-	.img-produto {
-		margin-left: 0px;
-		width: 300px;
-		height: 300px;
-	}
-}
 
 .carousel_img_prod {
 	height: 65px;
@@ -220,33 +218,6 @@ header{
   background-color: #ccc;
 }
 
-@media (min-width: 768px){
-	.dropdown-menu {
-		min-width:500px !important;
-	}
-
-
-}
-
-@media only screen and (max-width: 991px){
-	.navbar-default {
-		margin-top: 50px;
-	}
-
-	.icone {
-		background-color: transparent;
-		color:white;
-	}
-
-	.hidden {
-		display: unset !important;
-		background-color: transparent;
-	}
-
-	.filtro {
-		display: none;
-	}
-}
 
 .check {
 	display: none;
@@ -259,7 +230,6 @@ header{
 	position:absolute;
 	z-index: 1;
 }
-
 
 .barra {
 	height: 100%;
@@ -296,3 +266,41 @@ header{
 	transform: translateX(300px);
 }
 
+
+
+@media only screen and (max-width: 991px) {
+	.img-produto {
+		margin-left: 0px;
+		width: 300px;
+		height: 300px;
+	}
+}
+
+
+@media (min-width: 768px){
+	.dropdown-menu {
+		min-width:500px !important;
+	}
+
+
+}
+
+@media only screen and (max-width: 991px){
+	.navbar-default {
+		margin-top: 50px;
+	}
+
+	.icone {
+		background-color: transparent;
+		color:white;
+	}
+
+	.hidden {
+		display: unset !important;
+		background-color: transparent;
+	}
+
+	.filtro {
+		display: none;
+	}
+}
