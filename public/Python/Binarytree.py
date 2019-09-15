@@ -1,5 +1,4 @@
-socket = ""
-gen
+
 
 
 
@@ -57,4 +56,4 @@ class Tree:
                     atual = atual.intel 
                if atual == None:
                     return None 
-         return atual    
+             return atual
