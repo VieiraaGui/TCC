@@ -177,6 +177,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.bdconnection" />
+      <item itemvalue="Python.dbconnect" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.bdconnection" />

@@ -57,3 +57,16 @@ class Tree:
                if atual == None:
                     return None 
              return atual
+
+
+R = ['Root', 'Left', 'Right']
+for i in R:
+    if i == "AM4":
+
+        R[2] = i
+    else if:
+        i == "IntelV5"
+
+
+Teste = "https://www.youtube.com/watch?v=N1hTsbW50eM"
+Teste2 = "https://www.youtube.com/watch?v=W3hHX-Um28I"
