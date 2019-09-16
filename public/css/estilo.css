@@ -11,6 +11,11 @@ header{
 	background: white;
 }
 
+.monteseuPc{
+	background-color: white !important;
+	height: 500px;
+}
+
 .vertical-menu {
   width: 200px;
   background: white;
@@ -278,11 +283,9 @@ header{
 
 
 @media (min-width: 768px){
-	.dropdown-menu {
+	.hardware-drop .dropdown-menu {
 		min-width:500px !important;
 	}
-
-
 }
 
 @media only screen and (max-width: 991px){
@@ -303,4 +306,8 @@ header{
 	.filtro {
 		display: none;
 	}
+}
+
+.input-append .btn.dropdown-toggle {
+    float: none !important;
 }

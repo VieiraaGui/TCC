@@ -29,7 +29,7 @@
 					<li class="nav-item"><a class="nav-link text-botoes" href="#"><i class="fas fa-desktop"></i> Monte seu PC</a></li>
 				</ul>
 				<ul class="navbar-nav text-dark border-right col">
-					<li class="nav-item">
+					<li class="nav-item hardware-drop">
 						<a id="hardware" class="nav-link text-botoes dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-microchip"></i> Hardware</a>
 						<div class="dropdown-menu" aria-labelledby="hardware">
 							<div class="row">
@@ -59,16 +59,11 @@
 				</ul>				
 				<ul class="navbar-nav text-dark col">
 					<li class="nav-item">
-						<a id="hardware" class="nav-link text-botoes dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-store"></i> Lojas</a>
-						<div class="dropdown-menu" aria-labelledby="hardware">
-							<div class="row">
-	    						<a class="dropdown-item col border-right" href="https://www.kabum.com.br">Kabum</a>
-	    						<a class="dropdown-item col" href="https://www.pichau.com.br">Pichau</a>
-	    					</div>
-	    					<div class="dropdown-divider"></div>
-    						<div class="row">
-	    						<a class="dropdown-item col border-right" href="https://www.balaodainformatica.com.br">Balão da Informática</a>
-	    					</div>
+						<a id="lojas" class="nav-link text-botoes dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-store"></i> Lojas</a>
+						<div class="dropdown-menu" aria-labelledby="lojas">
+	    					<a class="dropdown-item col border-right" href="https://www.kabum.com.br">Kabum</a>
+	    					<a class="dropdown-item col" href="https://www.pichau.com.br">Pichau</a>
+	    					<a class="dropdown-item col border-right" href="https://www.balaodainformatica.com.br">Balão da Informática</a>
   						</div>
 					</li>
 				</ul>
@@ -109,6 +104,20 @@
 			</div>
 		</div>
 	</header>
+	<div class="container monteseuPc rounded">
+		<div class="input-append btn-group mt-5 ml-2 mb-5">
+			<label>Processadores:</label><br>
+    		<input class="form-control" size="60" type="text">
+    		<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+    		</a>
+    		<ul class="dropdown-menu">
+        		<li class="dropdown-item"> Intel I9</li>
+        		<li class="dropdown-item"> Intel I7</li>
+        		<li class="dropdown-item"> AMD FX6800</li>
+        		<li class="dropdown-item"> AMD Ryzen 7</li>
+    		</ul>
+		</div>
+	</div>
 
 	<footer>
 		<!-- JS -->
