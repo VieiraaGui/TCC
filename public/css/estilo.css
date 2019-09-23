@@ -16,6 +16,24 @@ header{
 	height: 500px;
 }
 
+.div-pc {
+	border:2px solid;
+	border-color:lightgrey;
+	width:100%;
+	border-radius:5px;
+}
+
+.img-fundo{
+	background: url('../img/ryzen1.png') no-repeat;
+	background-position: right;
+	background-position: top;
+}
+
+.header-pc {
+	background-color: lightgrey;
+	opacity:0.6;
+}
+
 .vertical-menu {
   width: 200px;
   background: white;
