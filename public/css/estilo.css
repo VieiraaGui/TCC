@@ -13,7 +13,7 @@ header{
 
 .monteseuPc{
 	background-color: white !important;
-	height: 500px;
+	height: auto;
 }
 
 .div-pc {
@@ -23,11 +23,27 @@ header{
 	border-radius:5px;
 }
 
-.img-fundo{
+.img-fundo-proc{
 	background: url('../img/ryzen1.png') no-repeat;
-	background-position: right;
-	background-position: top;
+	background-position: 250% 10%;
 }
+.img-fundo-MB{
+	background: url('../img/placaMaeAtx1.jpg') no-repeat;
+	background-position: 100% 40%;
+}
+.img-fundo-ram{
+	background: url('../img/RamDDR41.jpg') no-repeat;
+	background-position: 100% 40%;
+}
+.img-fundo-pv{
+	background: url('../img/Gtx980TI1.jpg') no-repeat;
+	background-position: 100% 15%;
+}
+.img-fundo-hd{
+	background: url('../img/HDSeagate1.jpg') no-repeat;
+	background-position: 100% 15%;
+}
+
 
 .header-pc {
 	background-color: lightgrey;
