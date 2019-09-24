@@ -43,6 +43,22 @@ header{
 	background: url('../img/HDSeagate1.jpg') no-repeat;
 	background-position: 100% 15%;
 }
+.img-fundo-ssd{
+	background: url('../img/SSDcorsair1.jpg') no-repeat;
+	background-position: 75% 50%;
+}
+.img-fundo-font{
+	background: url('../img/fonteCorsair1.jpg') no-repeat;
+	background-position: 100% 45%;
+}
+.img-fundo-cpu{
+	background: url('../img/gabineteAndromeda1.jpg') no-repeat;
+	background-position: 100% 25%;
+}
+.img-fundo-cooler{
+	background: url('../img/CoolerMaster1.jpg') no-repeat;
+	background-position: 100% 30%;
+}
 
 
 .header-pc {
