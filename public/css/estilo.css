@@ -11,6 +11,14 @@ header{
 	background: white;
 }
 
+.botao-geraPc {
+	margin-top:41px;
+}
+
+.H3-Hidden {
+	display: none;
+}
+
 .monteseuPc{
 	background-color: white !important;
 	height: auto;
