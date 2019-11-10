@@ -1,9 +1,9 @@
-mport mysql.connector
+import mysql.connector
 from mysql.connector import Error
 
 try:
-    connection = mysql.connector.connect(host='35.198.38.24',
-                                         database='teste123',
+    connection = mysql.connector.connect(host='34.95.209.0',
+                                         database='dados',
                                          user='root',
                                          password='')
 
@@ -18,7 +18,7 @@ try:
 except Error as e:
     print("Error while connecting to MySQL", e)
 finally:
-    if (connection.is_connected()):
+    if connection.is_connected():
         cursor.close()
         connection.close()
         print("MySQL connection is closed")
