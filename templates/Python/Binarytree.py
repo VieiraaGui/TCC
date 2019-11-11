@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 import pandas as pd
 from sklearn import tree
@@ -7,31 +9,69 @@ from sqlalchemy import create_engine
 
 mydb = mysql.connector.connect(
     user="root",
-    password = "",
-    host = "34.95.209.0",
-    database = 'dados'
+    password="",
+    host="34.95.209.0",
+    database='dados'
 )
 
-engine = create_engine('mysql+mysqlconnector://'+os.environ['root']+':'+os.environ['']+'@'+os.environ['34.95.209.0']+':'+os.environ['MYSQL_PORT']+'/sandbox', echo=False)
-
-product = data = pd.read_sql('SELECT socket, nomeProduto, preco, nota  FROM CPU-Pichau', engine)
+dataCpu = pd.read_sql('select cpuName, cpuPrice, cpuSocket, store, cpuAvailability from CPU', mydb)
+dataGpu = pd.read_sql('select * from GPU', mydb)
+dataMobo = pd.read_sql('select * from MOBO', mydb)
+dataRam = pd.read_sql('select * from RAM', mydb)
 
 socket = []
-for dado in product['socket'].dropna():
+for dado in dataCpu['cpuSocket'].dropna():
     socket.append(dado)
+
 nameP = []
-for dado in product['tipoProduto'].dropna():
+for dado in dataCpu['cpuName'].dropna():
     nameP.append(dado)
 
 precoP = []
-for dado in product['preco'].dropna():
+for dado in dataCpu['cpuPrice'].dropna():
     precoP.append(dado)
 
-p = {'Socket: ': socket, 'Tipo de produto': nameP, 'preco': precoP}
+lojaP = []
+for dado in dataCpu['store'].dropna():
+    lojaP.append(dado)
 
-comp = pd.DataFrame(data=p)
-comp
-print(comp)
+disp = []
+for dado in dataCpu['cpuAvailability'].dropna():
+    disp.append(dado)
+
+
+cpu = {'Nome Produto': nameP, 'Preço ': precoP, 'Socket: ': socket, 'Loja ': lojaP, 'Situação': disp}
+comp = pd.DataFrame(data=cpu)
+
+
+##################################
+
+socket = []
+for dado in dataGpu['cpuSocket'].dropna():
+    socket.append(dado)
+
+nameP = []
+for dado in dataGpu['cpuName'].dropna():
+    nameP.append(dado)
+
+precoP = []
+for dado in dataGpu['cpuPrice'].dropna():
+    precoP.append(dado)
+
+lojaP = []
+for dado in dataGpu['store'].dropna():
+    lojaP.append(dado)
+
+disp = []
+for dado in dataGpu['cpuAvailability'].dropna():
+    disp.append(dado)
+
+
+gpu = {'Nome Produto': nameP, 'Preço ': precoP, 'Socket: ': socket, 'Loja ': lojaP, 'Situação': disp}
+comp = pd.DataFrame(data=cpu)
+
+
+
 # # Testando a árvore
 # features = list(comp.columns[1:2])
 # testTree = comp[features]

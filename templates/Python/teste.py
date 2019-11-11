@@ -1,24 +1,24 @@
+
+import numpy as np
+import pandas as pd
+from sklearn import tree
+import graphviz
 import mysql.connector
-from mysql.connector import Error
+from sqlalchemy import create_engine
+mydb = mysql.connector.connect(
+    user="root",
+    password = "",
+    host = "34.95.209.0",
+    database = 'dados'
+)
 
-try:
-    connection = mysql.connector.connect(host='34.95.209.0',
-                                         database='dados',
-                                         user='root',
-                                         password='')
 
-    if connection.is_connected():
-        db_Info = connection.get_server_info()
-        print("Conectou foda no google ", db_Info)
-        cursor = connection.cursor()
-        cursor.execute("select database();")
-        record = cursor.fetchone()
-        print("Your connected to database: ", record)
+data = pd.read_sql('select * from CPU', mydb)
+print(data)
 
-except Error as e:
-    print("Error while connecting to MySQL", e)
-finally:
-    if connection.is_connected():
-        cursor.close()
-        connection.close()
-        print("MySQL connection is closed")
+print("////////////////////////////////////////////n")
+teste2 = pd.read_sql('select * from GPU', mydb)
+
+teste22 = pd.read_sql('select * from MOBO', mydb)
+teste = pd.read_sql('select * from RAM', mydb)
+
