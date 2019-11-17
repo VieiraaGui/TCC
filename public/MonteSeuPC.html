@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+	<nav class="navbar navbar-dark">
 		<div class="container">
 			<a class="navbar-brand col-3" href="Frontend.html"><img class="logo" src="img/logo.png" ></a>
 			<div class="input-group">
@@ -73,15 +73,15 @@
 				<div class="row">
 					<div class="col">
 						<h3>Utilidade</h3>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<select class="form-control" id="exampleFormControlSelect1" value="Games">
+							<option selected>Games</option>
 							<option>Profissional</option>
-							<option>Gamer</option>
-							<option>Estudo</option>
+							<option>Games</option>
 						</select>
 					</div>
 					<div class="col">
 						<h3>Preço</h3>
-						<input class="form-control" type=number>
+						<input class="form-control" type=number value="3.500">
 					</div>
 					<div class="col">
 						<h3>Desempenho</h3>
@@ -105,8 +105,14 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-proc">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn" data-target=".modal-processor" data-toggle="modal"><img src ="img/processor.png"></br>Processador</button>
-		    </div>
+				<button class="btn" data-target=".modal-processor" data-toggle="modal"><img src ="img/processor.png"></br>Processador</button>
+				
+			</div>
+			<div>
+				Nome Produto: Intel I5 8ª
+				<br>Nota Média: 83
+				<br>Preço: 750
+			</div>
 		    <div class="modal-processor modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 		    	<div class="modal-dialog modal-lg">
     				<div class="modal-content">
@@ -147,17 +153,32 @@
 		<div class="btn-group mt-3 div-pc img-fundo-MB">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/MotherBord.png"></br>Placa Mãe</button>
-		    </div>
+			</div>
+			<div>
+				Nome Produto: Gigabyte Z390
+				<br>Preço: 859.90
+			</div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-ram">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/Ram.png"></br>Memória Ram</button>
-		    </div>
+			</div>
+			<div>
+				Nome Produto: Ballistix 8 GB 
+				<br>Nota Média: 75
+				<br>Preço: 190.00
+
+			</div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-pv">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/VideoBord.png"></br>Placa de Vídeo</button>
-		    </div>
+			</div>
+			<div>
+				Nome Produto: GeForce GTX 1660
+				<br>Nota Média: 46.3
+				<br>Preço: 999
+			</div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-hd">
 			<div class="btn-primary rounded div-btn-pc">
