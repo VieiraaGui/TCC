@@ -4,15 +4,15 @@
 	<title>TCC - FrontEnd</title>
 	<meta charset="utf-8">
 	<!-- CSS -->
-	<link rel="stylesheet" href="{{url_for('static',filename= 'estilo.css')}}">
-	<link rel="stylesheet" href=" {{url_for('static',filename= 'bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{url_for('static',filename= 'fontawesome.min.css ')}}">
-	<link rel="stylesheet" href=" {{url_for('static',filename= 'all.min.css ')}}">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+	<nav class="navbar navbar-dark">
 		<div class="container">
-			<a class="navbar-brand col-3" href="{{Frontend.html}}"><img class="logo" src="img/logo.png" ></a>
+			<a class="navbar-brand col-3" href="Frontend.html"><img class="logo" src="img/logo.png" ></a>
 			<div class="input-group">
 			 	<input type="text" class="form-control" placeholder="Pesquise aqui seu produto" aria-label="Recipient's username" aria-describedby="botaoPesquisa">
 			 	<div class="input-group-append">
@@ -65,56 +65,54 @@
 	    					<a class="dropdown-item col" href="https://www.pichau.com.br">Pichau</a>
 	    					<a class="dropdown-item col border-right" href="https://www.balaodainformatica.com.br">Balão da Informática</a>
   						</div>
-					</li>DASDASDJASPDJ
+					</li>
 				</ul>
 			</nav>
-			<div class="row">
-				<div class="col-lg-5 col-12 text-light jumbotron bg-transparent">
-					<h1>Escolha o seu Jogo</h1>
-					<p class="text-light text-justify">Se você não conheçe muito de computadores e está procurando um PC GAMER. Temos a opção de montar uma configuração própria para o seu jogo preferido, clique aqui e confira.</p>
-					<a href="EscolhaSeuJogo.html" class="btn btn-dark btn-lg"> Escolha o seu Jogo </a>
-				</div>
-				<div class="col-lg-7 col-12">
-					<div id="img-home" class="carousel slide ml-4" data-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active ml-5 mt-3">
-								<img class="img-carousel circle" src="img/LOL.jpg">
-							</div>
-							<div class="carousel-item ml-5 mt-3">
-								<img class="img-carousel circle" src="img/csgo.jpg">
-							</div>
-							<div class="carousel-item ml-5 mt-3">
-								<img class="img-carousel circle" src="img/Dota2.png">
-							</div>
-							<div class="carousel-item ml-5 mt-3">
-								<img class="img-carousel circle" src="img/Fortnite.jpg">
-							</div>
-							<div class="carousel-item ml-5 mt-3">
-								<img class="img-carousel circle" src="img/Smite.jpg">
-							</div>
-						</div>
-						<a class="carousel-control-prev" href="#img-home" role="button" data-slide="prev">
-						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						</a>
-						<a class="carousel-control-next" href="#img-home" role="button" data-slide="next">
-						    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-						</a>
+
+			<div class="mt-5 text-light">
+				<div class="row">
+					<div class="col">
+						<h3>Utilidade</h3>
+						<select class="form-control" id="exampleFormControlSelect1" value="Games">
+							<option selected>Games</option>
+							<option>Profissional</option>
+							<option>Games</option>
+						</select>
+					</div>
+					<div class="col">
+						<h3>Preço</h3>
+						<input class="form-control" type=number value="3.500">
+					</div>
+					<div class="col">
+						<h3>Desempenho</h3>
+						<select class="form-control" id="exampleFormControlSelect1">
+							<option>Bom</option>
+							<option>Médio</option>
+							<option>Exelente</option>
+						</select>
+					</div>
+					<div class="col botao-geraPc">
+						<button class="btn btn-warning font-weight-bold">Gerar Pc</button>
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</header>
-	<div class="container backgroundWhite rounded">
+	<div class="container monteseuPc rounded">
 		<div class="">
 			<label class="mt-2 h2">Escolha as peças do Seu PC abaixo:</label>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-proc">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn" data-target=".modal-processor" data-toggle="modal"><img src ="img/processor.png"></br>Processador</button>
-		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary" data-toggle="modal" data-target=".modal-processor">Adicionar Produto</button>
-		    </div>
+				<button class="btn" data-target=".modal-processor" data-toggle="modal"><img src ="img/processor.png"></br>Processador</button>
+				
+			</div>
+			<div>
+				Nome Produto: Intel I5 8ª
+				<br>Nota Média: 83
+				<br>Preço: 750
+			</div>
 		    <div class="modal-processor modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 		    	<div class="modal-dialog modal-lg">
     				<div class="modal-content">
@@ -126,9 +124,6 @@
 		      					<div class="col-3 mt-2">
 		      						<label>PREÇO DO PRODUTO</label>
 		      					</div>
-		      					<div class="col-3 mt-1">
-		      						<button class="btn btn-sm btn-primary">ADICIONAR PRODUTO</button>
-		      					</div>
 		      				</div>
       					</div>
       					<div class="border border-secondary mb-2 rounded ml-1 mr-1">
@@ -139,9 +134,6 @@
 		      					<div class="col-3 mt-2">
 		      						<label>PREÇO DO PRODUTO</label>
 		      					</div>
-		      					<div class="col-3 mt-1">
-		      						<button class="btn btn-sm btn-primary">ADICIONAR PRODUTO</button>
-		      					</div>
 		      				</div>
       					</div>
       					<div class="border border-secondary mb-2 rounded ml-1 mr-1">
@@ -151,9 +143,6 @@
 		      					</div>
 		      					<div class="col-3 mt-2">
 		      						<label>PREÇO DO PRODUTO</label>
-		      					</div>
-		      					<div class="col-3 mt-1">
-		      						<button class="btn btn-sm btn-primary">ADICIONAR PRODUTO</button>
 		      					</div>
 		      				</div>
       					</div>
@@ -164,65 +153,56 @@
 		<div class="btn-group mt-3 div-pc img-fundo-MB">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/MotherBord.png"></br>Placa Mãe</button>
-		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
-		    </div>
+			</div>
+			<div>
+				Nome Produto: Gigabyte Z390
+				<br>Preço: 859.90
+			</div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-ram">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/Ram.png"></br>Memória Ram</button>
-		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
-		    </div>
+			</div>
+			<div>
+				Nome Produto: Ballistix 8 GB 
+				<br>Nota Média: 75
+				<br>Preço: 190.00
+
+			</div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-pv">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/VideoBord.png"></br>Placa de Vídeo</button>
-		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
-		    </div>
+			</div>
+			<div>
+				Nome Produto: GeForce GTX 1660
+				<br>Nota Média: 46.3
+				<br>Preço: 999
+			</div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-hd">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/hd.png"></br>Hard Disk (HD)</button>
-		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
 		    </div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-ssd">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/ssd.png"></br>SSD</button>
 		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
-		    </div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-font">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/fonte.png"></br>Fonte</button>
-		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
 		    </div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-cpu">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/gabinete.png"></br>Gabinete</button>
 		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
-		    </div>
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-cooler mb-3">
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="img/cooler.png"></br>Coolers</button>
-		    </div>
-		    <div class="mt-5 ml-5">
-		    	<button class="btn btn-lg border border-primary btn-primary">Adicionar Produto</button>
 		    </div>
 		</div>
 	</div>
