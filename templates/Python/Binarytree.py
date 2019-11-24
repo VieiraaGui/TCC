@@ -14,79 +14,106 @@ mydb = mysql.connector.connect(
     database='dados'
 )
 
-dataCpu = pd.read_sql('select cpuName, cpuPrice, cpuSocket, store, cpuAvailability from CPU', mydb)
-dataGpu = pd.read_sql('select * from GPU', mydb)
-dataMobo = pd.read_sql('select * from MOBO', mydb)
-dataRam = pd.read_sql('select * from RAM', mydb)
+dataCpu = pd.read_sql('select cpuName, cpuPrice, cpuSocket, store, from CPU where cpuAvailability  = "DISPONIVEL"', mydb)
 
-socket = []
+#Inicia CPU
+socketCpu = []
 for dado in dataCpu['cpuSocket'].dropna():
-    socket.append(dado)
+    socketCpu.append(dado)
 
-nameP = []
+nameCpu = []
 for dado in dataCpu['cpuName'].dropna():
-    nameP.append(dado)
+    nameCpu.append(dado)
 
-precoP = []
+precoCpu = []
 for dado in dataCpu['cpuPrice'].dropna():
-    precoP.append(dado)
+    precoCpu.append(dado)
 
-lojaP = []
+lojaCpu = []
 for dado in dataCpu['store'].dropna():
-    lojaP.append(dado)
+    lojaCpu.append(dado)
 
-disp = []
+dispCpu = []
 for dado in dataCpu['cpuAvailability'].dropna():
-    disp.append(dado)
+    dispCpu.append(dado)
 
+cpu = {'Processador': nameCpu, 'Preço': precoCpu, 'Socket': socketCpu, 'Loja': lojaCpu}
+processador = pd.DataFrame(data=cpu)
 
-cpu = {'Nome Produto': nameP, 'Preço ': precoP, 'Socket: ': socket, 'Loja ': lojaP, 'Situação': disp}
-comp = pd.DataFrame(data=cpu)
+#Inicia GPU
+dataGpu = pd.read_sql('select gpuName, gpuModel, gpuPrice, gpuVRAM, store from GPU where gpuAvailability = "DISPONIVEL"', mydb)
 
+gpuName = []
+for dado in dataGpu['gpuName'].dropna():
+    gpuName.append(dado)
 
-##################################
+gpuModel = []
+for dado in dataGpu['gpuName'].dropna():
+    gpuModel.append(dado)
 
-socket = []
-for dado in dataGpu['cpuSocket'].dropna():
-    socket.append(dado)
+gpuPrice = []
+for dado in dataGpu['gpuPrice'].dropna():
+    gpuPrice.append(dado)
 
-nameP = []
-for dado in dataGpu['cpuName'].dropna():
-    nameP.append(dado)
-
-precoP = []
-for dado in dataGpu['cpuPrice'].dropna():
-    precoP.append(dado)
-
-lojaP = []
+gpuStore = []
 for dado in dataGpu['store'].dropna():
-    lojaP.append(dado)
+    gpuStore.append(dado)
+cpu = {'P': nameCpu, 'Preço |': precoCpu, 'Socket |': socketCpu, 'Loja |': lojaCpu, 'Situação |': dispCpu}
+processador = pd.DataFrame(data=cpu)
 
-disp = []
-for dado in dataGpu['cpuAvailability'].dropna():
-    disp.append(dado)
+#Inicia MOBO
+
+dataMobo = pd.read_sql('select moboModel, moboSocket, moboPrice, store from MOBO where moboAvailability = "DISPONIVEL"', mydb)
+
+socketMobo = []
+for dado in dataMobo['moboSocket'].dropna():
+    socketMobo.append(dado)
+
+nameMobo = []
+for dado in dataMobo['moboModel'].dropna():
+    nameMobo.append(dado)
+
+priceMobo = []
+for dado in dataMobo['moboPrice'].dropna():
+    priceMobo.append(dado)
+
+storeMobo = []
+for dado in dataMobo['store'].dropna():
+    storeMobo.append(dado)
 
 
-gpu = {'Nome Produto': nameP, 'Preço ': precoP, 'Socket: ': socket, 'Loja ': lojaP, 'Situação': disp}
-comp = pd.DataFrame(data=cpu)
+placaMae = {'Placa Mãe': nameMobo, 'Socket': socketMobo, 'Preço': priceMobo, 'Loja': storeMobo}
+mobo = pd.DataFrame(data=placaMae)
+
+#Inicia Ram
+dataRam = pd.read_sql('select ramName, ramPrice, ramSize, ramAvailability, store from RAM where  ramAvailability = '
+                      '"DISPONIVEl"', mydb)
+
+ramName = []
+for dado in dataCpu['ramName'].dropna():
+    ramName.append(dado)
+
+ramSize = []
+for dado in dataCpu['ramSize'].dropna():
+    ramSize.append(dado)
+
+ramPrice = []
+for dado in dataCpu['ramPrice'].dropna():
+    ramPrice.append(dado)
+
+ramStore = []
+for dado in dataCpu['store'].dropna():
+    ramStore.append(dado)
+
+memRam = {'Nome Ram': ramName, 'Tamanho': ramSize, 'Preço': ramPrice, 'Loja': ramStore}
+ram = pd.DataFrame(data=memRam)
 
 
 
-# # Testando a árvore
-# features = list(comp.columns[1:2])
-# testTree = comp[features]
-#
-# result = clf.predict(testTree)
-#
-# i = 0
-#
-#
-# def verificaSocket(r):
-#     if r[1] == 'AM4':
-#         return "Socket AMD"
-#     elif r[2] == '1151' or r[2] == '1151 v2':
-#         return "Socket Intel"
-#
-#
-# for resp in result:
-#     print(str(product[i]) + '-' + verificaSocket(resp))
+###############################################
+
+
+
+
+
+

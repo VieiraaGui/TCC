@@ -21,4 +21,9 @@ teste2 = pd.read_sql('select * from GPU', mydb)
 
 teste22 = pd.read_sql('select * from MOBO', mydb)
 teste = pd.read_sql('select * from RAM', mydb)
+dataRam = pd.read_sql('select ramName, ramPrice, ramSize, ramAvailability, store from RAM where ramAvailability = '
+                      '"DISPONIVEl"', mydb)
+
+print(dataRam)
+
 

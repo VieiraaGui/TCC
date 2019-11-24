@@ -4,15 +4,15 @@
 	<title>TCC - FrontEnd</title>
 	<meta charset="utf-8">
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/fontawesome.min.css">
-	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="{{url_for('static',filename='estilo.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='fontawesome.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='all.min.css')}}">
 </head>
 <body>
 	<nav class="navbar navbar-dark">
 		<div class="container">
-			<a class="navbar-brand col-3" href="Frontend.html"><img class="logo" src="img/logo.png" ></a>
+			<a class="navbar-brand col-3" href="Frontend.html"><img class="logo" src="{{url_for('static', filename='logo.png')}}" ></a>
 			<div class="input-group">
 			 	<input type="text" class="form-control" placeholder="Pesquise aqui seu produto" aria-label="Recipient's username" aria-describedby="botaoPesquisa">
 			 	<div class="input-group-append">
@@ -105,7 +105,7 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-proc">
 			<div class="btn-primary rounded div-btn-pc">
-				<button class="btn" data-target=".modal-processor" data-toggle="modal"><img src ="img/processor.png"></br>Processador</button>
+				<button class="btn" data-target=".modal-processor" data-toggle="modal"><img src ="{{url_for('static', filename='processor.png')}}"></br>Processador</button>
 				
 			</div>
 			<div>
@@ -152,7 +152,7 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-MB">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn"><img src ="img/MotherBord.png"></br>Placa Mãe</button>
+		    	<button class="btn"><img src ="{{url_for('static', filename='MotherBord.png')}}"></br>Placa Mãe</button>
 			</div>
 			<div>
 				Nome Produto: Gigabyte Z390
@@ -161,7 +161,7 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-ram">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn"><img src ="img/Ram.png"></br>Memória Ram</button>
+		    	<button class="btn"><img src ="{{url_for('static', filename='Ram.png')}}"></br>Memória Ram</button>
 			</div>
 			<div>
 				Nome Produto: Ballistix 8 GB 
@@ -172,7 +172,7 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-pv">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn"><img src ="img/VideoBord.png"></br>Placa de Vídeo</button>
+		    	<button class="btn"><img src ="{{url_for('static', filename='VideoBord.png')}}"></br>Placa de Vídeo</button>
 			</div>
 			<div>
 				Nome Produto: GeForce GTX 1660
@@ -202,7 +202,7 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-cooler mb-3">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn"><img src ="img/cooler.png"></br>Coolers</button>
+		    	<button class="btn"><img src ="{{url_for('static', filename='cooler.png')}}"></br>Coolers</button>
 		    </div>
 		</div>
 	</div>
@@ -210,12 +210,12 @@
 
 	<footer>
 		<!-- JS -->
-		<script src="js/jquery.js"></script>
+		<script src="{{url_for('static', filename='jquery.js')}}"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/fontawesome.min.js"></script>
-		<script src="js/all.min.js"></script>
-		<script src="js/main.js"></script>
+<script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+		<script src="{{url_for('static', filename='fontawesome.min.js')}}"></script>
+		<script src="{{url_for('static', filename='all.min.js')}}"></script>
+		<script src="{{url_for('static', filename='main.js')}}"></script>
 	</footer>
 
 </body>
