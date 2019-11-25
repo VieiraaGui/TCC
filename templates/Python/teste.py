@@ -23,7 +23,8 @@ teste22 = pd.read_sql('select * from MOBO', mydb)
 teste = pd.read_sql('select * from RAM', mydb)
 dataRam = pd.read_sql('select ramName, ramPrice, ramSize, ramAvailability, store from RAM where ramAvailability = '
                       '"DISPONIVEl"', mydb)
-
-print(dataRam)
+dataCpu = pd.read_sql('select cpuName, cpuPrice, cpuSocket, store, from CPU where cpuAvailability  = '
+                      '"DISPONIVEl"', mydb)
+print(dataCpu)
 
 
