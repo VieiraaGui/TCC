@@ -12,7 +12,8 @@ mydb = mysql.connector.connect(
     database = 'dados'
 )
 
-
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.max_rows', 500)
 data = pd.read_sql('select * from CPU', mydb)
 print(data)
 

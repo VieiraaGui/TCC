@@ -92,7 +92,7 @@
 						</select>
 					</div>
 					<div class="col botao-geraPc">
-						<button class="btn btn-warning font-weight-bold">Gerar Pc</button>
+						<button class="btn btn-warning font-weight-bold" id="geraPc">Gerar Pc</button>
 					</div>
 				</div>
 			</div>
@@ -174,7 +174,7 @@
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="{{url_for('static', filename='VideoBord.png')}}"></br>Placa de Vídeo</button>
 			</div>
-			<div>
+			<div class="placa-video">
 				Nome Produto: GeForce GTX 1660
 				<br>Nota Média: 46.3
 				<br>Preço: 999
@@ -202,7 +202,7 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-cooler mb-3">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn"><img src ="{{url_for('static', filename='cooler.png')}}"></br>Coolers</button>
+		    	<button class="btn"><img src ="{{url_for('static', filename='cooler.png')f}}"></br>Coolers</button>
 		    </div>
 		</div>
 	</div>
@@ -210,7 +210,25 @@
 
 	<footer>
 		<!-- JS -->
-		<script src="{{url_for('static', filename='jquery.js')}}"></script>
+		<script src="{{url_for('static', filename='jquery.js')}}">
+			$(function() {
+    $('geraPc').click(function() {
+        $.ajax({
+            url: 'static/Binarytree.py',
+            data: $('placa-video').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+
+
+		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
 		<script src="{{url_for('static', filename='fontawesome.min.js')}}"></script>
