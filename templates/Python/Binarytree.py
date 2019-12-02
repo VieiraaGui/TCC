@@ -7,8 +7,9 @@ import graphviz
 import mysql.connector
 from sqlalchemy import create_engine
 
-pd.set_option('display.max_columns', 10000)
-pd.set_option('display.max_rows', 1000)
+pd.set_option('display.max_columns', 200)
+pd.set_option('display.max_rows', 200)
+
 mydb = mysql.connector.connect(
     user="root",
     password="",
@@ -18,6 +19,7 @@ mydb = mysql.connector.connect(
 
 dataCpu = pd.read_sql('select cpuName, cpuPrice, cpuSocket, store, cpuScore from CPU where cpuAvailability  = '
                       '"DISPONIVEL"', mydb)
+
 i = 0
 # Inicia CPU
 socketCpu = []
@@ -31,22 +33,35 @@ for dado in dataCpu['cpuName'].dropna():
 precoCpu = []
 for dado in dataCpu['cpuPrice'].dropna():
     precoCpu.append(dado)
+precoCpu = list(map(int, precoCpu))
 
 notaCpu = []
 for dado in dataCpu['cpuScore'].dropna():
     notaCpu.append(dado)
+
+notaCpu = list(map(int, notaCpu))
+
 desemp = []
-if notaCpu[i] <= 40 and precoCpu[i] < 500:
-    desemp.append('Razoavel')
+for i in range(len(notaCpu)):
+    if notaCpu[i] <= 50 and precoCpu[i] < 500:
+        desemp.append('Razoavel')
+    elif notaCpu[i] < 70 and precoCpu[i] <= 1500:
+        desemp.append('Bom')
+    elif notaCpu[i] >= 70 and precoCpu[i] < 3500:
+        desemp.append('Excelente')
+    else:
+        print(nameCpu[i], notaCpu[i], precoCpu[i])
 
 lojaCpu = []
 for dado in dataCpu['store'].dropna():
     lojaCpu.append(dado)
 
-cpu = {'Processador': nameCpu, 'Preço': precoCpu, 'Socket': socketCpu, 'Nota': notaCpu, 'Loja': lojaCpu}
+cpu = {'Processador': nameCpu, 'Preço': precoCpu, 'Socket': socketCpu, 'Nota': notaCpu, 'Desempenho': desemp,
+       'Loja': lojaCpu}
+
 processador = pd.DataFrame(data=cpu)
 
-# Inicia GPU
+# # Inicia GPU
 dataGpu = pd.read_sql(
     'select gpuName, gpuModel, gpuPrice, gpuVRAM, store, gpuScore from GPU where gpuAvailability = "DISPONIVEL"', mydb)
 
@@ -55,7 +70,7 @@ for dado in dataGpu['gpuName'].dropna():
     gpuName.append(dado)
 
 gpuModel = []
-for dado in dataGpu['gpuName'].dropna():
+for dado in dataGpu['gpuModel'].dropna():
     gpuModel.append(dado)
 
 gpuRam = []
@@ -65,17 +80,35 @@ for dado in dataGpu['gpuVRAM'].dropna():
 gpuPrice = []
 for dado in dataGpu['gpuPrice'].dropna():
     gpuPrice.append(dado)
+gpuPrice = list(map(int, gpuPrice))
 
 gpuScore = []
 for dado in dataGpu['gpuScore'].dropna():
     gpuScore.append(dado)
+gpuScore = list(map(int, gpuScore))
+
+desemp = []
+for i in range(len(gpuScore)):
+    if gpuScore[i] <= 50 and gpuPrice[i] < 800:
+        desemp.append('Baixo')
+    elif gpuScore[i] < 60 and gpuPrice[i] <= 1900:
+        desemp.append('Medio Baixo')
+    elif gpuScore[i] < 70 and gpuPrice[i] <= 2500:
+        desemp.append('Medio')
+    elif gpuScore[i] < 80 and gpuPrice[i] <= 4500:
+        desemp.append('Medio Alto')
+    elif gpuScore[i] >= 80 and gpuPrice[i] <= 100000:
+        desemp.append('Alto')
+    else:
+        print(gpuName[i], gpuScore[i], gpuPrice[i])
 
 gpuStore = []
 for dado in dataGpu['store'].dropna():
     gpuStore.append(dado)
 
-placaV = {'Placa Mãe': gpuName, 'Modelo': gpuModel, 'Memória': gpuRam, 'Nota': gpuScore, 'Loja': gpuStore}
-placaVi = pd.DataFrame(data=cpu)
+placaV = {'Placa Video': gpuName, 'Modelo': gpuModel, 'Memória': gpuRam, 'Nota': gpuScore, 'Desempenho': desemp,
+          'Loja': gpuStore}
+placaVi = pd.DataFrame(data=placaV)
 
 # Inicia MOBO
 
@@ -111,7 +144,9 @@ for dado in dataRam['ramName'].dropna():
 
 ramSize = []
 for dado in dataRam['ramSize'].dropna():
+    dado = dado[0:len(dado) - 2]
     ramSize.append(dado)
+
 
 ramPrice = []
 for dado in dataRam['ramPrice'].dropna():
@@ -121,43 +156,36 @@ ramStore = []
 for dado in dataRam['store'].dropna():
     ramStore.append(dado)
 
+
 memRam = {'Nome_Ram': ramName, 'Tamanho': ramSize, 'Preco': ramPrice, 'Loja': ramStore}
 ram = pd.DataFrame(data=memRam)
 
-comp = pd.concat([processador[nameCpu, notaCpu, precoCpu], placaVi[gpuName, gpuScore, gpuPrice, gpuStore],
-                  placaM[nameMobo, priceMobo, storeMobo], ram[ramSize, ramPrice, ramStore]], axis=1)
 
-print(comp)
+comp = pd.concat([processador, placaVi, placaM, ram], axis=1)
+
 
 utilidade = []
 
-for nota in comp['Nota']:
-    for desemp1 in comp['Desempenho']:
-        desemp = True
-        if nota <= 20 and desemp1 == 'Razoavel':
-            utilidade.append('Profissional')
-        if nota <= 40 and desemp1 == 'Razoavel':
-            utilidade.append('Profissional')
-        if nota <= 60 and desemp1 == 'Bom':
-            utilidade.append('Games')
-        if nota >= 61 and desemp1 == 'Excelente':
-            utilidade.append('Games')
+for i in comp[processador]:
+    for gpuScore in comp[placaVi]:
+        for desemp in comp['Desempenho']:
+            desemp = True
+            if notaCpu <= 20 and gpuScore and desemp == 'Razoavel':
+                utilidade.append('Profissional')
+            if notaCpu <= 20 and gpuScore and desemp == 'Razoavel':
+                utilidade.append('Profissional')
+            if notaCpu <= 20 and gpuScore and desemp == 'Bom':
+                utilidade.append('Games')
+            if notaCpu <= 20 and gpuScore and desemp == 'Excelente':
+                utilidade.append('Games')
 
 u = {'Utilidade': utilidade}
 
 utilidadeFinal = pd.DataFrame(data=u)
 
-dataframe = pd.concat([comp, utilidadeFinal], axis=1)
+print(utilidadeFinal)
 
-# testando a árvore de decisão
+# dataframe = pd.concat([comp, utilidadeFinal], axis=1)
 
-features = list(dataframe.columns[1:6])
-X = dataframe = [features]
-
-target = list(dataframe.columns[6:8])
-y = dataframe = [target]
-
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(X, y)
-
-# ###############################################
+# # #
+# # # ###############################################

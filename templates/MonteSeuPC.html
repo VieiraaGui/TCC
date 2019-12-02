@@ -202,7 +202,7 @@
 		</div>
 		<div class="btn-group mt-3 div-pc img-fundo-cooler mb-3">
 			<div class="btn-primary rounded div-btn-pc">
-		    	<button class="btn"><img src ="{{url_for('static', filename='cooler.png')f}}"></br>Coolers</button>
+		    	<button class="btn"><img src ="{{url_for('static', filename='cooler.png')}}"></br>Coolers</button>
 		    </div>
 		</div>
 	</div>
@@ -211,7 +211,7 @@
 	<footer>
 		<!-- JS -->
 		<script src="{{url_for('static', filename='jquery.js')}}">
-			$(function() {
+		$(function() {-->
     $('geraPc').click(function() {
         $.ajax({
             url: 'static/Binarytree.py',
