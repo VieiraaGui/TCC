@@ -106,9 +106,16 @@ $(document).ready(function () {
  $(document).ready(function() {
 
             $("#geraPc").click(function(event){
-                $.get('/static/arquivo.txt', function(emp) {
-                    $('#Processador').html('<p> Utilidade: '  + emp +  '</p>');
-                    $('#Processador').append('<p> Teste: '  + emp +  '</p>');
+                $.get('/static/Comp.json', function(emp) {
+                    $('#Processador').html('<p> <b> Processador:</b> '  + emp.Processador +  '</p>');
+                    $('#PlacaM').html('<p> <b> Placa Mãe: </b>'  + emp.Placa_Mae +  '</p>');
+                    $('#MemRam').html('<p> <b> Memória Ram:</b> '  + emp.MemRam +  '</p>');
+                    $('#placa-video').html('<p> <b> Placa de Vídeo:</b> '  + emp.Placa_video +  '</p>');
+                    $('#HD').html('<p> <b>HD:</b> '  + emp.HD +  '</p>');
+                    $('#SSD').html('<p> <b> SSD: </b>'  + emp.SSD +  '</p>');
+                    $('#Fonte').html('<p> <b> Fonte:</b> '  + emp.Fonte +  '</p>');
+                    $('#Gabinete').html('<p> <b>Gabinete:</b> '  + emp.Gabinete +  '</p>');
+                    $('#Cooler').html('<p> <b> Cooler: </b>'  + emp.Cooler +  '</p>');
                 });
             });
         });

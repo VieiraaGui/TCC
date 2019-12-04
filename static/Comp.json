@@ -1,8 +1,11 @@
-i3 9100F, R$432, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101918
-GTX 1660 Asus Phoenix, R$1029, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101232
-B365M-K, R$329.00, https://www.terabyteshop.com.br/produto/11538/placa-mae-asus-prime-b365m-k-chipset-b365-intel-1151-matx-ddr4
-8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085
-EVGA 400W, R$171.90, https://www.kabum.com.br/produto/59467/fonte-evga-400w-100-n1-0400-l
-HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010
-SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r
-PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca
+
+{
+  "Placa_Video": "GTX 1660 Asus Phoenix, R$1029, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101232",
+"Processador": "i3 9100F, R$432, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101918",
+  "Placa_Mae":  "B365M-K, R$329.00, https://www.terabyteshop.com.br/produto/11538/placa-mae-asus-prime-b365m-k-chipset-b365-intel-1151-matx-ddr4",
+   "MemRam": "8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085",
+   "Fonte": "EVGA 400W, R$171.90, https://www.kabum.com.br/produto/59467/fonte-evga-400w-100-n1-0400-l",
+   "HD": "HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010",
+    "SSD": "SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r",
+     "Gabinete": "PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca"
+}

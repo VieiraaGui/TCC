@@ -12,9 +12,9 @@ mydb = mysql.connector.connect(
     database='dados'
 )
 
-Arquivo = open(r"C:\Git\TCC\static\Comp.json", "w")
+Arquivo = open(r"C:\Users\Matheus\Music\Teste.txt","w")
 
-valortotal = 3000
+valortotal = 2500
 
 selectedMobo = []
 selectedRAM = []
@@ -25,78 +25,53 @@ selectedCase = []
 
 if valortotal < 1725:
     print('Valor insuficiente para montagem do equipamento')
+    exit()
 elif valortotal > 1725 and valortotal <= 2000:
-    selectedRAM.append(
-        '4GB, R$119.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=79700')
+    selectedRAM.append('4GB, R$119.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=79700')
     selectedPSU.append('EVGA 400W, R$171.90, https://www.kabum.com.br/produto/59467/fonte-evga-400w-100-n1-0400-l')
-    selectedHDD.append(
-        'HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
+    selectedHDD.append('HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
     selectedSSD.append('N/D')
-    selectedCase.append(
-        'PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
-    valortotal -= (339.90 + 171.90 + 149.90 + 238.99 + 119.90)
+    selectedCase.append('PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
+    valortotal -= (339.90+171.90+149.90+238.99+119.90)
     # print(valortotal)
 elif valortotal > 2000 and valortotal <= 2500:
-    selectedRAM.append(
-        '8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
+    selectedRAM.append('8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
     selectedPSU.append('EVGA 400W, R$171.90, https://www.kabum.com.br/produto/59467/fonte-evga-400w-100-n1-0400-l')
-    selectedHDD.append(
-        'HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
+    selectedHDD.append('HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
     selectedSSD.append('N/D')
-    selectedCase.append(
-        'PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
+    selectedCase.append('PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
     valortotal -= (339.90 + 171.90 + 149.90 + 238.99 + 175.90)
 elif valortotal > 2500 and valortotal <= 3000:
-    selectedRAM.append(
-        '8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
+    selectedRAM.append('8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
     selectedPSU.append('EVGA 400W, R$171.90, https://www.kabum.com.br/produto/59467/fonte-evga-400w-100-n1-0400-l')
-    selectedHDD.append(
-        'HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
-    selectedSSD.append(
-        'SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
-    selectedCase.append(
-        'PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
+    selectedHDD.append('HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
+    selectedSSD.append('SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
+    selectedCase.append('PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
     valortotal -= (339.90 + 171.90 + 149.90 + 238.99 + 109.99 + 175.90)
 elif valortotal > 3000 and valortotal <= 3500:
-    selectedRAM.append(
-        '8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
-    selectedPSU.append(
-        'Corsair 550W, R$224.90, https://www.terabyteshop.com.br/produto/10608/fonte-corsair-vs-series-vs550-550w-cp-9020171-ww-80-plus-white-pfc-ativo')
-    selectedHDD.append(
-        'HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
-    selectedSSD.append(
-        'SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
-    selectedCase.append(
-        'PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
+    selectedRAM.append('8GB, R$175.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
+    selectedPSU.append('Corsair 550W, R$224.90, https://www.terabyteshop.com.br/produto/10608/fonte-corsair-vs-series-vs550-550w-cp-9020171-ww-80-plus-white-pfc-ativo')
+    selectedHDD.append('HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
+    selectedSSD.append('SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
+    selectedCase.append('PCYes Mercury, R$149.90, https://www.pichau.com.br/hardware/gabinete/gabinete-pcyes-mercury-lateral-acrilico-preto-verde-mrcptvd1fca')
     valortotal -= (339.90 + 224.90 + 149.90 + 238.99 + 109.99 + 175.90)
-elif valortotal > 3500 and valortotal < 4000:
-    selectedRAM.append(
-        '2x8GB, R$351.80, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
-    selectedPSU.append(
-        'Corsair 550W, R$224.90, https://www.terabyteshop.com.br/produto/10608/fonte-corsair-vs-series-vs550-550w-cp-9020171-ww-80-plus-white-pfc-ativo')
-    selectedHDD.append(
-        'HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
-    selectedSSD.append(
-        'SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
-    selectedCase.append(
-        'DeepCool Materxx 50, R$279.00, https://www.terabyteshop.com.br/produto/12220/gabinete-gamer-deepcool-matrexx-50-rgb-3f-mid-tower-black-s-fonte-dp-atx-matrexx50-ar-3f-us')
+elif valortotal > 3500 and valortotal <= 4000:
+    selectedRAM.append('2x8GB, R$351.80, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
+    selectedPSU.append('Corsair 550W, R$224.90, https://www.terabyteshop.com.br/produto/10608/fonte-corsair-vs-series-vs550-550w-cp-9020171-ww-80-plus-white-pfc-ativo')
+    selectedHDD.append('HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
+    selectedSSD.append('SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
+    selectedCase.append('DeepCool Materxx 50, R$279.00, https://www.terabyteshop.com.br/produto/12220/gabinete-gamer-deepcool-matrexx-50-rgb-3f-mid-tower-black-s-fonte-dp-atx-matrexx50-ar-3f-us')
     valortotal -= (339.90 + 224.90 + 279.00 + 238.99 + 109.99 + (175.90 * 2))
 elif valortotal > 4000:
-    selectedRAM.append(
-        '2x8GB, R$351.80, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
-    selectedPSU.append(
-        'Corsair 550W, R$224.90, https://www.terabyteshop.com.br/produto/10608/fonte-corsair-vs-series-vs550-550w-cp-9020171-ww-80-plus-white-pfc-ativo')
-    selectedHDD.append(
-        'HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
-    selectedSSD.append(
-        'SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
-    selectedCase.append(
-        'DeepCool Materxx 50, R$279.00, https://www.terabyteshop.com.br/produto/12220/gabinete-gamer-deepcool-matrexx-50-rgb-3f-mid-tower-black-s-fonte-dp-atx-matrexx50-ar-3f-us')
+    selectedRAM.append('2x8GB, R$351.80, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101085')
+    selectedPSU.append('Corsair 550W, R$224.90, https://www.terabyteshop.com.br/produto/10608/fonte-corsair-vs-series-vs550-550w-cp-9020171-ww-80-plus-white-pfc-ativo')
+    selectedHDD.append('HD 1TB, R$238.99, https://www.pichau.com.br/hardware/hard-disk-e-ssd/hd-seagate-1tb-barracuda-3-5-7200-rpm-64mb-cache-sata-iii-st1000dm010')
+    selectedSSD.append('SSD 120GB, R$109.99, https://www.terabyteshop.com.br/produto/12222/ssd-adata-su650-120gb-sata-iii-leitura-520mbs-e-gravacao-450mbs-asu650ss-120gt-r')
+    selectedCase.append('DeepCool Materxx 50, R$279.00, https://www.terabyteshop.com.br/produto/12220/gabinete-gamer-deepcool-matrexx-50-rgb-3f-mid-tower-black-s-fonte-dp-atx-matrexx50-ar-3f-us')
     valortotal -= (339.90 + 224.90 + 279.00 + 238.99 + 109.99 + (175.90 * 2))
 
-dataCpu = pd.read_sql(
-    'SELECT cpuName, cpuPrice, cpuSocket, store, cpuSerial, cpuScore, cpuLink FROM CPU WHERE cpuAvailability  = '
-    '"DISPONIVEL" ORDER BY cpuPrice', mydb)
+dataCpu = pd.read_sql('SELECT cpuName, cpuPrice, cpuSocket, store, cpuSerial, cpuScore, cpuLink FROM CPU WHERE cpuAvailability  = '
+                      '"DISPONIVEL" ORDER BY cpuPrice', mydb)
 
 i = 0
 
@@ -143,15 +118,13 @@ lojaCpu = []
 for dado in dataCpu['store'].dropna():
     lojaCpu.append(dado)
 
-cpu = {'Processador': nameCpu, 'Preço': precoCpu, 'Socket': socketCpu, 'Nota': notaCpu, 'SerialCPU': serialCpu,
-       'Desempenho': desemp, 'Loja': lojaCpu, "LinkCPU": linkCpu}
+cpu = {'Processador': nameCpu, 'Preço': precoCpu, 'Socket': socketCpu, 'Nota': notaCpu, 'SerialCPU': serialCpu, 'Desempenho': desemp, 'Loja': lojaCpu, "LinkCPU": linkCpu}
 
 processador = pd.DataFrame(data=cpu)
 
 # # Inicia GPU
 dataGpu = pd.read_sql(
-    'SELECT gpuName, gpuModel, gpuPrice, gpuVRAM, store, gpuSerial, gpuScore, gpuLink FROM GPU WHERE gpuAvailability = "DISPONIVEL" ORDER BY gpuPrice',
-    mydb)
+    'SELECT gpuName, gpuModel, gpuPrice, gpuVRAM, store, gpuSerial, gpuScore, gpuLink FROM GPU WHERE gpuAvailability = "DISPONIVEL" ORDER BY gpuPrice', mydb)
 
 gpuName = []
 for dado in dataGpu['gpuName'].dropna():
@@ -202,8 +175,8 @@ for i in range(len(gpuScore)):
     else:
         print(gpuName[i], gpuScore[i], gpuPrice[i])
 
-placaV = {'Placa_Video': gpuName, 'Modelo': gpuModel, 'Memória': gpuRam, 'Nota': gpuScore, 'GPUSerial': gpuSerial,
-          'Desempenho': desemp,
+
+placaV = {'Placa_Video': gpuName, 'Modelo': gpuModel, 'Memória': gpuRam, 'Nota': gpuScore, 'GPUSerial': gpuSerial, 'Desempenho': desemp,
           'Loja': gpuStore, 'PRECO': gpuPrice, 'GPULink': gpuLink}
 placaVi = pd.DataFrame(data=placaV)
 
@@ -259,52 +232,45 @@ comp = pd.concat([processador, placaVi], axis=1)
 
 utilidade = []
 
-for i in range(len(processador)):
-    for j in range(len(placaVi)):
+for i in range (len(processador)):
+    for j in range (len(placaVi)):
         if (precoCpu[i] + gpuPrice[j] < valortotal):
             if int(notaCpu[i]) <= 32 and int(gpuScore[j]) <= 31:
                 # utilidade.append('0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['SerialCPU'][i] + ' ' + placaVi['GPUSerial'][j] + ' ' + cpu['Socket'][i])
-                utilidade.append(
-                    '0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$' + str(
-                        cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' +
-                    placaVi['Modelo'][j] + ', R$' + str(placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
+                utilidade.append('0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$' + str(cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' + placaVi['Modelo'][j] + ', R$' + str(placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
             if int(notaCpu[i]) > 32 and (notaCpu[i]) <= 40 and int(gpuScore[j]) > 31 and int(gpuScore[j]) <= 40.5:
                 # utilidade.append('0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['SerialCPU'][i] + ' ' + placaVi['GPUSerial'][j] + ' ' + cpu['Socket'][i])
                 utilidade.append(
                     '0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$' + str(
-                        cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' +
-                    placaVi['Modelo'][j] + ', R$' + str(
+                        cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' + placaVi['Modelo'][j] + ', R$' + str(
                         placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
-            if int(notaCpu[i]) > 40 and (notaCpu[i]) <= 67 and int(gpuScore[j]) > 40.5 and int(gpuScore[j]) <= 62.6:
+            if int(notaCpu[i]) > 40 and (notaCpu[i]) <= 67 and int(gpuScore[j]) > 40.5 and  int(gpuScore[j]) <= 62.6:
                 if (placaVi['Nota'][j] + cpu['Nota'][i]) < 100:
                     # utilidade.append('0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['SerialCPU'][i] + ' ' + placaVi['GPUSerial'][j] + ' ' + cpu['Socket'][i])
                     utilidade.append(
-                        '0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$' + str(
-                            cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' +
-                        placaVi['Modelo'][
+                        '0' + str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$'  + str(
+                            cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' + placaVi['Modelo'][
                             j] + ', R$' + str(placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
                 # utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['SerialCPU'][i] + ' ' +  placaVi['GPUSerial'][j] + ' ' + cpu['Socket'][i])
-                utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$' + str(
-                    cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' +
-                                 placaVi['Modelo'][j] + ', R$' + str(
-                    placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
-            if int(notaCpu[i]) > 67 and (notaCpu[i]) <= 85 and int(gpuScore[j]) > 62.6 and int(gpuScore[j]) <= 80.7:
+                utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$'  + str(
+                        cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' + placaVi['Modelo'][j] + ', R$' + str(
+                        placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
+            if int(notaCpu[i]) > 67 and (notaCpu[i]) <= 85 and int(gpuScore[j]) > 62.6 and  int(gpuScore[j]) <= 80.7:
                 # utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['SerialCPU'][i] + ' ' + placaVi['GPUSerial'][j] + ' ' + cpu['Socket'][i])
-                utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$' + str(
-                    cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' +
-                                 placaVi['Modelo'][j] + ', R$' + str(
+                utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$'  + str(
+                    cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' + placaVi['Modelo'][j] + ', R$' + str(
                     placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
             if int(notaCpu[i]) > 85 and int(gpuScore[j]) > 80.7:
                 # utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['SerialCPU'][i] + ' ' + placaVi['GPUSerial'][j] + ' ' + cpu['Socket'][i])
-                utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$' + str(
-                    cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n' + placaVi['Placa_Video'][j] + ' ' +
-                                 placaVi['Modelo'][j] + ', R$' + str(
+                utilidade.append(str(placaVi['Nota'][j] + cpu['Nota'][i]) + ' ' + cpu['Processador'][i] + ', R$'  + str(
+                    cpu['Preço'][i]) + ', ' + cpu['LinkCPU'][i] + '\n'+ placaVi['Placa_Video'][j] + ' ' + placaVi['Modelo'][j] + ', R$' + str(
                     placaVi['PRECO'][j]) + ", " + placaVi['GPULink'][j])
+
 
 maiorvalor = 0
 valori = 0
 
-for i in range(len(utilidade)):
+for i in range (len(utilidade)):
     valor = utilidade[i]
     valor = int(valor[0:3])
 
@@ -315,28 +281,27 @@ for i in range(len(utilidade)):
         socket = utilidade[i]
         socket = socket[len(socket) - 3:len(socket)]
 
+
 # print(utilidade[valori])
 
+
 if socket == 'AM4':
-    selectedMobo.append(
-        'GA-AB350M-DS3H V2, R$339.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101715')
+    selectedMobo.append('GA-AB350M-DS3H V2, R$339.90, https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=101715')
 else:
-    selectedMobo.append(
-        'B365M-K, R$329.00, https://www.terabyteshop.com.br/produto/11538/placa-mae-asus-prime-b365m-k-chipset-b365-intel-1151-matx-ddr4')
+    selectedMobo.append('B365M-K, R$329.00, https://www.terabyteshop.com.br/produto/11538/placa-mae-asus-prime-b365m-k-chipset-b365-intel-1151-matx-ddr4')
+
 
 cpuEgpu = utilidade[valori]
 cpuEgpu = cpuEgpu[4:len(cpuEgpu)]
 print(cpuEgpu)
 
-print(selectedMobo[0] + '\n' + selectedRAM[0] + '\n' + selectedPSU[0] + '\n' + selectedHDD[0] + '\n' + selectedSSD[
-    0] + '\n' + selectedCase[0])
+print(selectedMobo[0] + '\n' + selectedRAM[0] + '\n' + selectedPSU[0] + '\n' + selectedHDD[0] + '\n' +selectedSSD[0] + '\n' +selectedCase[0])
 
 u = {'Utilidade': utilidade}
 
 utilidadeFinal = pd.DataFrame(data=u)
 
-Arquivo.write(
-    cpuEgpu + '\n' + selectedMobo[0] + '\n' + selectedRAM[0] + '\n' + selectedPSU[0] + '\n' + selectedHDD[0] + '\n' +
-    selectedSSD[0] + '\n' + selectedCase[0])
+
+Arquivo.write(cpuEgpu + '\n' + selectedMobo[0] + '\n' + selectedRAM[0] + '\n' + selectedPSU[0] + '\n' + selectedHDD[0] + '\n' +selectedSSD[0] + '\n' +selectedCase[0])
 
 
