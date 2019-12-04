@@ -1,8 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
 
+@app.route('/montaPC/static/Comp.json')
+def teste():
+    print('DASDA')
+    return redirect('/static/Comp.json', 301)
 @app.route("/")
 def index():
     return render_template('Frontend.html')
@@ -11,8 +15,6 @@ def index():
 @app.route("/produto/")
 def produto():
     return render_template('Produto.html')
-
-
 
 
 @app.route("/promocoes/")
@@ -25,5 +27,5 @@ def montapc():
     return render_template('MonteSeuPC.html')
 
 
-if __name__ == "__main__":  
+if __name__ == "__main__":
     app.run()

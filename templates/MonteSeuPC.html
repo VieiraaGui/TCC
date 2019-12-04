@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{url_for('static', filename='fontawesome.min.css')}}">
 	<link rel="stylesheet" href="{{url_for('static', filename='all.min.css')}}">
+	<script src="{{url_for('static', filename='jquery.js')}}"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
 </head>
 <body>
 	<nav class="navbar navbar-dark">
@@ -108,7 +111,18 @@
 				<button class="btn" data-target=".modal-processor" data-toggle="modal"><img src ="{{url_for('static', filename='processor.png')}}"></br>Processador</button>
 				
 			</div>
-			<div>
+			<script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}">
+
+
+$(function() {
+    $('#geraPc').click(function() {
+        alert('dasd');
+    });
+});
+
+
+			</script>
+			<div id="Processador">
 				Nome Produto: Intel I5 8ª
 				<br>Nota Média: 83
 				<br>Preço: 750
@@ -154,7 +168,7 @@
 			<div class="btn-primary rounded div-btn-pc">
 		    	<button class="btn"><img src ="{{url_for('static', filename='MotherBord.png')}}"></br>Placa Mãe</button>
 			</div>
-			<div>
+			<div id="PlacaM">
 				Nome Produto: Gigabyte Z390
 				<br>Preço: 859.90
 			</div>
@@ -211,21 +225,21 @@
 	<footer>
 		<!-- JS -->
 		<script src="{{url_for('static', filename='jquery.js')}}">
-		$(function() {-->
-    $('geraPc').click(function() {
-        $.ajax({
-            url: 'static/Binarytree.py',
-            data: $('placa-video').serialize(),
-            type: 'POST',
-            success: function(response) {
-                console.log(response);
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-    });
-});
+<!--			$(function() {-->
+<!--    $('geraPc').click(function() {-->
+<!--        $.ajax({-->
+<!--            url: 'static/Binarytree.py',-->
+<!--            data: $('placa-video').serialize(),-->
+<!--            type: 'POST',-->
+<!--            success: function(response) {-->
+<!--                console.log(response);-->
+<!--            },-->
+<!--            error: function(error) {-->
+<!--                console.log(error);-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--});-->
 
 
 		</script>

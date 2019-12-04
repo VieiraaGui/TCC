@@ -90,6 +90,29 @@ $(document).ready(function () {
     });
 });
 
+
+//	$(function() {
+//   $(document).ready(function() {
+//
+//            $("#geraPc").click(function(event){
+//                $.getJSON('Comp.json', function(emp) {
+//                    $('#Processador').html('<p> Name: ' utilidade + '</p>');
+//
+//                });
+//            });
+//        });
+//});
+
+ $(document).ready(function() {
+
+            $("#geraPc").click(function(event){
+                $.get('/static/arquivo.txt', function(emp) {
+                    $('#Processador').html('<p> Utilidade: '  + emp +  '</p>');
+                    $('#Processador').append('<p> Teste: '  + emp +  '</p>');
+                });
+            });
+        });
+
 /*const btnIcone = $("#icone-responsive");
 	btnIcone.click(event => {
 	const iToggle = $(event.target);
