@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 mydb = mysql.connector.connect(
     user="root",
     password="",
-    host="34.95.209.0",
+    host="",
     database='dados'
 )
 
