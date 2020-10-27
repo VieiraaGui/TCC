@@ -8,7 +8,7 @@ pd.set_option('display.max_rows', 50)
 mydb = mysql.connector.connect(
     user="root",
     password="",
-    host="34.95.209.0",
+    host="",
     database='dados'
 )
 
